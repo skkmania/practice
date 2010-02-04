@@ -24,6 +24,7 @@ Event.observe( window, 'load', function()  {
   $$( 'button' ).invoke( 'observe', 'click', buttonClick );
 } );
   </script>
+  <link rel="stylesheet" href="scriptaculous/test/test.css" type="text/css" />
   <link rel="stylesheet" href="style/test.css" type="text/css" />
 </head>
 <body>
@@ -66,15 +67,29 @@ var testcases = {
   } },
   testGreen : function() {  with( this )  {
     /* ..... 領域を緑色にするテスト(省略) ..... */
+    var color = 'green';
+    try  {
+      new Event.simulateMouse( color, 'click' );
+    }  catch( e )  {
+      buttonClick( { target : { id : color } } );
+    }
+    assertEqual( color, $( 'demo' ).getStyle( 'backgroundColor' ) );
   } },
   testBlue : function() {  with( this )  {
     /* ..... 領域を青色にするテスト(省略) ..... */
+    var color = 'blue';
+    try  {
+      new Event.simulateMouse( color, 'click' );
+    }  catch( e )  {
+      buttonClick( { target : { id : color } } );
+    }
+    assertEqual( color, $( 'demo' ).getStyle( 'backgroundColor' ) );
   } }
 };
 new Test.Unit.Runner( testcases, 'testlog' );
 // ]]>
 </script>
-<div id="testlog"></div>  ← テスト結果の出力先
+<div id="testlog">テスト結果の出力先</div>
 </body>
 </html>
 
