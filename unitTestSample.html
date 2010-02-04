@@ -44,27 +44,37 @@ Event.observe( window, 'load', function()  {
 <!-- Tests -->
 <script type="text/javascript" language="javascript">
 // <![CDATA[
-  new Test.Unit.Runner({
-    // optional setup function, run before each individual test case
-    setup: function() { with(this) {
-      // code
-    }},
-    // optional teardown function, run after each individual test case
-    teardown: function() { with(this) {
-      // code
-    }},
-
-    // test cases follow, each method which starts 
-    // with "test" is considered a test case
-    testATest: function() { with(this) {
-      // code
-    }},
-    testAnotherTest: function() { with(this) {
-      // code
-    }}
-  }, { options });
+var testcases = {
+  setup : function()  {  with( this )  {
+    // 領域を初期化
+    $( 'demo' ).setStyle( { 'backgroundColor' : '', 'color' : '', 'fontWeight' : '' } );
+  } },
+  teardown : function()  {  with( this )  {
+    /* ..... テストの後処理(省略) ..... */
+  } },
+  testRed : function() {  with( this )  {
+    // 領域を赤色にするテスト
+    var color = 'red';
+    // ボタンをクリック(そうでなければイベントハンドラを実行)
+    try  {
+      new Event.simulateMouse( color, 'click' );
+    }  catch( e )  {
+      buttonClick( { target : { id : color } } );
+    }
+    // 領域の背景色が'red'なら動作は正常
+    assertEqual( color, $( 'demo' ).getStyle( 'backgroundColor' ) );
+  } },
+  testGreen : function() {  with( this )  {
+    /* ..... 領域を緑色にするテスト(省略) ..... */
+  } },
+  testBlue : function() {  with( this )  {
+    /* ..... 領域を青色にするテスト(省略) ..... */
+  } }
+};
+new Test.Unit.Runner( testcases, 'testlog' );
 // ]]>
 </script>
+<div id="testlog"></div>  ← テスト結果の出力先
 </body>
 </html>
 
