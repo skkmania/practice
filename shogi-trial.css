@@ -1,0 +1,32 @@
+div#container {
+  background-color: #ccc;
+}
+
+div#topStand {
+  float:left;
+  width: 30px;
+  margin-left: 10px;
+  background-color: #666;
+}
+
+div#board {
+  float:left;
+  width: 300px;
+  margin-left: 10px;
+  background-color: #888;
+}
+
+div#bottomStand {
+  float:left;
+  width: 30px;
+  margin-left: 10px;
+  background-color: #f66;
+}
+
+div#sidebar {
+  float:left;
+  width: 100px;
+  margin-left: 10px;
+  background-color: #aaa;
+}
+
