@@ -1,0 +1,32 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Style-Type" content="text/css" />
+<meta http-equiv="Content-Script-Type" content="text/javascript" />
+  <link rel="stylesheet" href="cssSample.css" type="text/css" />
+  <!-- other JavaScript includes -->
+  <script>
+    var add3 = function(x){
+          return function(y){
+            return function(z){
+               return x + y + z;
+            };
+          };
+        };
+    function init(){
+      var elm = document.getElementById('val');
+      var txt = document.createElement('text');
+      txt.innerHTML = add3(1)(2)(3);
+      elm.appendChild(txt);
+    }
+    window.onload = init;
+  </script>
+</head>
+<body>
+<div id="container">
+  1, 2, 3, 4, 5
+  <div id = "val"></div>
+  , 7, 8, 9
+</body>
+</html>
+
