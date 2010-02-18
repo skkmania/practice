@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
 <head>
   <title>Page title</title>
   <script src="scriptaculous/lib/prototype.js" type="text/javascript"></script>
@@ -29,8 +29,6 @@ Event.observe( window, 'load', function()  {
 </head>
 <body>
 
-<!-- Log output -->
-<div id="testlog"> </div>
 
 <!-- here go any elements you do the testing on -->
 <div id="demo">
@@ -89,7 +87,9 @@ var testcases = {
 new Test.Unit.Runner( testcases, 'testlog' );
 // ]]>
 </script>
-<div id="testlog">テスト結果の出力先</div>
+<!-- Log output -->
+<div>テスト結果の出力先</div>
+<div id="testlog"></div>
 </body>
 </html>
 
