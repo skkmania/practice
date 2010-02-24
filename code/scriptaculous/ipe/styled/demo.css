@@ -1,0 +1,18 @@
+h1 { font-size: 1.5em; }
+
+.editable.hovered {
+  border: 1px dashed #880;
+}
+
+form.first {
+  border: 3px solid silver;
+  background: #ddd;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+.inplaceeditor-saving {
+  height: 16px; padding-left: 20px;
+  background: url(/spinner.gif) no-repeat left center;
+  font: italic smaller/16px sans-serif; color: gray;
+}

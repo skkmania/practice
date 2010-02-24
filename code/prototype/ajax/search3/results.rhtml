@@ -1,0 +1,29 @@
+<!--
+ ! Excerpted from "Prototype and script.aculo.us",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/cppsu for more book information.
+-->
+<% id = "results_#{Time.now.to_i}_#{rand 42}" %>
+<div id="<%= id %>" style="display: none;">
+  <h2>Results for &laquo;<%= q %>&raquo;:</h2>
+<% if results.empty?  %>
+  <p>No result found.  Sorry!</p>
+<% else %>
+  <ul>
+<% results.each do |lib| %>
+    <li><%= lib %></li>
+<% end %>
+  </ul>
+<% end %>
+</div>
+<script type="text/javascript">
+var results = $('results');
+if (!results.visible()) {
+  $('<%= id %>').show();
+  new Effect.BlindDown(results);
+} else
+  new Effect.BlindDown('<%= id %>');
+</script>

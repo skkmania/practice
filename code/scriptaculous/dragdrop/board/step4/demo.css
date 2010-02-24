@@ -1,0 +1,26 @@
+h1 { font-size: 1.5em; }
+
+#board {
+  margin: 1em 0; padding: 4px; width: 192px; height: 192px; /* 64px x 3 */
+  border: 1px solid gray; background: silver; position: relative;
+}
+
+#piece {
+  position: absolute; left: 68px; top: 4px;
+  width: 64px; height: 64px; cursor: move;
+  background: url(piece.png) no-repeat;
+}
+
+#board.tuxMoving { background-color: #f77; }
+
+#log {
+  position: absolute; left: 212px; top: 0; height: 202px; width: 10em;
+  font-family: sans-serif; font-size: smaller; color: #555; overflow: auto;
+}
+
+span.cell {
+  float: left; width: 64px; height: 64px; margin: 0; padding: 0;
+}
+
+span.cell.white { background: white; }
+span.cell.black { background: black; }

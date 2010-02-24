@@ -1,0 +1,81 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+ ! Excerpted from "Prototype and script.aculo.us",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/cppsu for more book information.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Builder in action</title>
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+    <script type="text/javascript" src="prototype.js"></script>
+    <script type="text/javascript" src="scriptaculous.js?load=builder,effects"></script>
+    <script type="text/javascript" src="demo.js"></script>
+</head>
+<body>
+
+<h1><code>Builder</code> in action</h1>
+
+<p>Click on the buttons for each scripting code to see the results.</p>
+
+<form>
+<table id="demos">
+    <thead>
+       <tr>
+           <th>Code example</th>
+	   <th></th>
+	   <th>Result</th>
+       </tr>
+    </thead>
+    <tbody>
+    	<tr>
+		<td><pre>// Text child
+Builder.node('h1', 'Builder rules')</pre></td>
+		<td><input type="button" value="Try it!"/></td>
+		<td></td>
+	</tr>
+    	<tr>
+		<td><pre>// Element child
+Builder.node('h1', Builder.node('code', 'Builder'))</pre></td>
+		<td><input type="button" value="Try it!"/></td>
+		<td></td>
+	</tr>
+    	<tr>
+		<td><pre>// Multiple children
+Builder.node('h1', [ Builder.node('code', 'Builder'), ' rules'])</pre></td>
+		<td><input type="button" value="Try it!"/></td>
+		<td></td>
+	</tr>
+    	<tr>
+		<td><pre>// Attributes, text child
+Builder.node('a', { href: 'http://prototypejs.org' }, 'Prototype!')</pre></td>
+		<td><input type="button" value="Try it!"/></td>
+		<td></td>
+	</tr>
+    	<tr>
+		<td><pre>// Attributes, element child
+Builder.node('p', { className: 'submission' },
+  Builder.node('input', { type: 'submit', value: 'Sign in' }))</pre></td>
+		<td><input type="button" value="Try it!"/></td>
+		<td></td>
+	</tr>
+    	<tr>
+		<td><pre>// Attributes, multiple children
+Builder.node('a',
+  { href: 'http://prototypejs.org/api/ajax/updater' },
+  [ Builder.node('code', 'Ajax.Updater'), ' documentation' ])</pre></td>
+		<td><input type="button" value="Try it!"/></td>
+		<td></td>
+	</tr>
+    </tbody>
+</table>
+</form>
+
+</body>
+</html>
+

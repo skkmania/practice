@@ -1,0 +1,4 @@
+h1 { font-size: 1.5em; }
+li { cursor: move; }
+
+#changeNotif, #updateNotif { font-family: monospace; }

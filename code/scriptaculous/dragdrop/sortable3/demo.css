@@ -1,0 +1,11 @@
+h1 { font-size: 1.5em; }
+#guys {
+  list-style-type: none;
+  padding: 0;
+}
+#guys li {
+  float: left; cursor: move;
+  margin-left: 1em; padding: 0.2em; width: 10em;
+  border: 0.05em solid gray; background: #ddd;
+  text-align: center;
+}

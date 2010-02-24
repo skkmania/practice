@@ -1,0 +1,21 @@
+h1 { font-size: 1.5em; }
+
+#demos {
+  border-collapse: collapse;
+  margin: 1em 0;
+  border-bottom: 0.1em solid black;
+}
+
+#demos h1 { margin: 0; }
+
+#demos th {
+  border: 0.1em solid black;
+  border-width: 0.1em 0;
+  padding: 0.4em;
+  background: #ffd;
+}
+
+#demos td {
+  border-bottom: 0.05em solid gray;
+  padding: 0.4em;
+}

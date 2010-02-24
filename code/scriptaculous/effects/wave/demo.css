@@ -1,0 +1,6 @@
+#fun {
+  position: absolute; top: 30px; left: 20px; width: 500px; padding: 30px;
+  background: #080; color: #fff;
+  text-align: center;
+  font: 40px sans-serif;
+}

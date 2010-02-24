@@ -1,0 +1,13 @@
+code, tt { font-size: 115%; color: green; }
+
+#ref, .element {
+  border: 1px solid gray;
+  padding: 1ex; width: 30ex;
+  background: #ffd;
+  text-align: center;
+}
+
+.element { background: #dfd; width: 28ex; }
+.element.top, .element.before { margin-bottom: 1ex; }
+.element.bottom, .element.after { margin-top: 1ex; }
+.element.wrap { background: #ddf; width: 32ex; }

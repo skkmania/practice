@@ -1,0 +1,9 @@
+h1 { font-size: 1.5em; }
+
+#demo {
+  position: absolute; right: 0; top: 4em; width: 30ex; height: 6em;
+  line-height: 1.5em;
+  text-align: center;
+  background: #dfd;
+  cursor: default;
+}

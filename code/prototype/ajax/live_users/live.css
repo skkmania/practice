@@ -1,0 +1,5 @@
+#userList {
+  width: 15em; margin: 1em 0; padding: 0.25em;
+  border: 1px solid navy; background: #ddf; color: navy;
+  list-style-type: none;
+}

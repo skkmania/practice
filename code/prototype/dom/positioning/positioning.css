@@ -1,0 +1,27 @@
+html, body { margin: 0; padding: 0; }
+
+.pad {
+  position: absolute;
+  width: 200px;
+  height: 100px;
+  background: #abc9dc;
+}
+
+#pad1 { top: 100px; left: 200px; }
+#pad2 { top: 750px; left: 600px; }
+#pad3 { top: 150px; left:  50px; }
+
+#scroller {
+  position: absolute;
+  left: 200px; top: 450px;
+  width: 300px; height: 250px; overflow: scroll;
+}
+
+#scrollForcer1 { height: 1000px; }
+#scrollForcer2 { height: 300px; }
+
+#coords {
+  position: fixed;
+  top: 10px; right: 10px; width: 200px; height: 100px;
+  font-size: small; background: #ffd; border: 1px solid gray; padding: 10px;
+}

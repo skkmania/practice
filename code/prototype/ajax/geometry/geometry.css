@@ -1,0 +1,35 @@
+.widget {
+  position: absolute; top: 5em; width: 15em;
+  border: 0.25em solid gray; background: silver;
+  padding: 1em 0.5em 0.5em;
+  overflow: auto;
+}
+
+.widget h2 {
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 1.5em;
+  font-size: inherit; line-height: 1.5em;
+  margin: 0; padding: 0 0.2ex;
+  background: gray; cursor: move;
+}
+
+#win0 {
+  border-color: red; background: #fdd;
+  height: 8em; left: 2em;
+}
+
+#win0 h2 { background: #f99; color: maroon; }
+
+#win1 {
+  border-color: green; background: #dfd;
+  left: 20em; height: 10em;
+}
+
+#win1 h2 { background: #9f9; color: #080; }
+
+#win2 {
+  border-color: blue; background: #ddf;
+  left: 38em; height: 6em;
+}
+
+#win2 h2 { background: #99f; color: #008; }

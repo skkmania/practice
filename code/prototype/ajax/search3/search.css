@@ -1,0 +1,15 @@
+#searchForm fieldset, #results {
+  width: 30em; margin: 1em auto; padding: 0.5em;
+}
+#searchForm fieldset { background: #ddd; }
+#edtSearch { width: 20em; padding: 0 0.2ex; }
+#edtSearch:active, #edtSearch:focus {
+  background: #ffd; border: 2px solid black;
+} 
+#results {
+  border: 1px solid green; background: #dfd; color: #040;
+}
+#results ul { margin: 0; padding-left: 1em; }
+#results li { font-family: monospace; }
+
+h2 { font-size: 1.1em; color: #020; margin: 0.5em 0 0.25em; }

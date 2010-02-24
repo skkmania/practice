@@ -1,0 +1,51 @@
+fieldset {
+  width: 32em;
+  background: #ddd;
+}
+
+h1 {
+  font-size: 1.5em;
+  color: green;
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: normal;
+  color: green;
+}
+
+#progress {
+  position: absolute;
+  font-size: smaller;
+  line-height: 16px;
+  color: gray;
+  background: url(spinner.gif) 0.2em 0.2em no-repeat;
+  padding: 0.2em 0.2em 0.2em 24px;
+  border: 1px solid gray;
+  top: 1em; right: 1em; width: 9em; height: 16px;
+}
+
+#selectors {
+  width: 33em;
+  text-align: right;
+}
+
+#taskText {
+  width: 25em;
+}
+
+#tasks {
+  list-style-type: none;
+  padding-left: 0;
+  width: 33em;
+  border-bottom: 1px solid silver;
+}
+
+#tasks li {
+  border-top: 1px solid silver;
+  padding: 0.2em 0;
+}
+
+#tasks li:hover {
+  background: #ffd;
+}

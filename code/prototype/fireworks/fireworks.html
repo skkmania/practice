@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+ ! Excerpted from "Prototype and script.aculo.us",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/cppsu for more book information.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>A combined example of using Prototype&#8230;</title>
+    <link rel="stylesheet" type="text/css" href="fireworks.css" />
+    <script type="text/javascript" src="prototype.js"></script>
+    <script type="text/javascript" src="fireworks.js"></script>
+</head>
+<body>
+
+<h1>A combined example of using Prototype</h1>
+
+<form id="addForm" method="post" action="/tasks">
+  <fieldset>
+    <legend>Add task</legend>
+    <p>
+      <label for="taskText" accesskey="T">Text:</label>
+      <input type="text" id="taskText" name="text" />
+    </p>
+    <p><input type="submit" value="New task!" /></p>
+  </fieldset>
+</form>
+
+<p id="progress" style="display: none;">Adding task&#8230;</p>
+
+<h2>Task list</h2>
+
+<p id="selectors">
+  <a href="#" id="selectAll">Select all</a> &middot;
+  <a href="#" id="deselectAll">Deselect all</a>
+</p>
+
+<ul id="tasks">
+</ul>
+
+</body>
+</html>
+

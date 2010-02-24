@@ -1,0 +1,17 @@
+h1 { font-size: 1.5em; }
+
+#products { margin-bottom: 20px; height: 180px; }
+
+.product, #cart img { cursor: move; }
+
+#cart {
+  width: 350px; height: 100px; padding: 1ex;
+  border: 1px solid #fa0;
+  font-family: sans-serif; color: gray;
+}
+
+#trash {
+  width: 64px; margin: 0; padding: 1ex;
+  border: 2px dotted white;
+  /* Internet Explorer doesn't know transparent... */
+}

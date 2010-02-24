@@ -1,0 +1,9 @@
+h1 { font-size: 1.5em; }
+
+.inplaceeditor-loading { background: #ddd; color: gray; }
+
+.inplaceeditor-saving {
+  height: 16px; padding-left: 20px;
+  background: url(/spinner.gif) no-repeat left center;
+  font: italic smaller/16px sans-serif; color: gray;
+}

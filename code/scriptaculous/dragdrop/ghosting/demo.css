@@ -1,0 +1,13 @@
+h1 { font-size: 1.5em; }
+
+.pad {
+  position: absolute; top: 4em; left: 4em;
+  width: 6em; height: 6em; margin: 0; padding: 0;
+  border: 1px solid green; background: #dfd; color: green;
+  text-align: center;
+}
+
+#ghostly {
+  left: 14em;
+  border-color: navy; background: #ddf; color: navy;
+}

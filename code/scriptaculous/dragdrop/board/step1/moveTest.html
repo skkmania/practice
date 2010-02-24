@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Playing with draggables</title>
+    <link rel="stylesheet" type="text/css" href="demo.css" />
+    <script type="text/javascript" src="prototype.js"></script>
+    <script type="text/javascript"
+     src="scriptaculous.js?load=effects,dragdrop"></script>
+    <script type="text/javascript" src="demo.js"></script>
+</head>
+<body>
+
+<h1>Playing with Draggables</h1>
+
+<div id="board">
+    <span id="piece"></span>
+</div>
+
+<div id="board2">
+</div>
+<div id="dummy" class="a b c d b c a a b c"></div>
+<div id="cln"></div>
+<div id="message"></div>
+<div id="message2"></div>
+<div id="after-message"></div>
+<div id="after-message2"></div>
+<form>
+    <p>
+        <input type="checkbox" id="chkDraggable" checked="checked" />
+        <label for="chkDraggable" accesskey="D">Tux is draggable</label>
+    </p>
+    <p>
+        <input type="button" id="moveDraggable" checked="checked" />
+        <label for="moveDraggable" accesskey="E">move to another board</label>
+    </p>
+    <p>
+        <input type="button" id="copyDraggable" checked="checked" />
+        <label for="copyDraggable" accesskey="F">copy to another board</label>
+    </p>
+    <p>
+        <input type="button" id="copyHtml" checked="checked" />
+        <label for="copyHtml" accesskey="F">copy innerHTML to another board</label>
+    </p>
+    <p>
+        <input type="button" id="toggleCN" checked="checked" />
+        <label for="toggleCN" accesskey="G">toggle classname</label>
+    </p>
+</form>
+
+</body>
+</html>
+

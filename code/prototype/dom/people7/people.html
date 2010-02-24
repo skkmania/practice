@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+ ! Excerpted from "Prototype and script.aculo.us",
+ ! published by The Pragmatic Bookshelf.
+ ! Copyrights apply to this code. It may not be used to create training material, 
+ ! courses, books, articles, and the like. Contact us if you are in doubt.
+ ! We make no guarantees that this code is fit for any purpose. 
+ ! Visit http://www.pragmaticprogrammer.com/titles/cppsu for more book information.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Organizing your staff</title>
+  <link rel="stylesheet" type="text/css" href="people.css" />
+  <script type="text/javascript" src="../../../prototype.js"></script>
+  <script type="text/javascript" src="people.js"></script>
+</head>
+<body>
+  <h1>Organizing your staff</h1>
+
+  <div id="tree">
+    <h2>Your staff</h2>
+    <form id="staff">
+      <ul></ul>
+    </form>
+  </div>
+
+  <div id="props">
+    <h2>Item properties</h2>
+    <form id="editor">
+      <p>
+        <label for="edtName" accesskey="N">Name:</label>
+        <input type="text" id="edtName" />
+      </p>
+      <p>
+        <input type="checkbox" id="chkIsGroup" />
+        <label for="chkIsGroup" id="lblIsGroup" accesskey="G">Is a group?</label>
+      </p>
+      <p>
+        <input type="button" id="btnRemove" value="Remove" accesskey="R" />
+        <input type="button" id="btnAddChild" value="Add as child" accesskey="C" />
+        <input type="submit" id="btnSubmit" value="Create" />
+      </p>
+    </form>
+  </div>
+</body>
+</html>
