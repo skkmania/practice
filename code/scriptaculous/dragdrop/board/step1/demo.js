@@ -41,6 +41,16 @@ function copyHTML() {
   $('board').innerHTML = tmp;
 }
 
+function addcn_a() {
+  $('dummy').addClassName('a');
+  $('cln').innerHTML = $('dummy').className;
+}
+
+function addcn_d() {
+  $('dummy').addClassName('f');
+  $('cln').innerHTML = $('dummy').className;
+}
+
 function togglecn() {
   var chr = "abc"[togglecounter%3]; //  + " " + "bca"[togglecounter%3]; 
   $('dummy').toggleClassName(chr);
@@ -68,6 +78,8 @@ document.observe('dom:loaded', function() {
   $('copyDraggable').observe('click', copyToAnother);
   $('copyHtml').observe('click', copyHTML);
   $('toggleCN').observe('click', togglecn);
+  $('addCN').observe('click', addcn_a);
+  $('addCNd').observe('click', addcn_d);
   var board = $('board');
   var board2 = $('board2');
   drawBoard(board, 3, 3);

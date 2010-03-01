@@ -1,0 +1,19 @@
+<html>
+<head>
+<script src="Log.js"></script>
+<link rel="stylesheet" type="text/css" href="log.css">
+</head>
+<body>
+<script>
+function makeRectangle(x,y,w,h){
+  log.debug("entering makeRectangle");
+  var r = {x:x, y:y, size: { w:w, h:h }};
+  log.debug("new Rectangle", r);
+  log.debug("exiting makeRectangle");
+  return r;
+}
+</script>
+<button onclick="makeRectangle(1,2,3,4);">Make Rectangle</button>
+<div id="debug_log" class="log"></div>
+</body>
+</html>
