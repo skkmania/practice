@@ -8,7 +8,9 @@
 function makeRectangle(x,y,w,h){
   log.debug("entering makeRectangle");
   var r = {x:x, y:y, size: { w:w, h:h }};
+  log.options.timestamp = true;
   log.debug("new Rectangle", r);
+  log.options.timestamp = false;
   log.debug("exiting makeRectangle");
   return r;
 }

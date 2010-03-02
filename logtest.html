@@ -1,0 +1,50 @@
+<html>
+<head>
+<script src="log4js.js"></script>
+</head>
+<body>
+<script>
+function funcB(x,y){
+  var div = window.log.makeDiv();
+  window.log.debug(div, "entering funcB");
+  x = x * 8;
+  window.log.debug(div, "x was multiplied by 8");
+  y = y * 3;
+  window.log.debug(div, "y was multiplied by 3");
+  window.log.debug(div, "leaving funcB");
+  return x + y;
+}
+
+function funcA(x,y){
+  var div = window.log.makeDiv();
+  window.log.debug(div, "entering funcA");
+  x = x * 10;
+  window.log.debug(div, "x was multiplied by 10");
+  window.log.waitAsParent(div);
+  funcB(3,2);
+  y = y * 5;
+  window.log.debug(div, "y was multiplied by 5");
+  window.log.debug(div, "leaving funcA");
+  return x + y;
+}
+
+function makeRectangle(x,y,w,h){
+  window.log = new Log(Log.DEBUG, Log.popupLogger);
+  window.log.debug(null, "start logging");
+  var div = window.log.makeDiv();
+  window.log.setCSSfile('./log.css', log);
+  window.log.debug(div, "entering makeRectangle");
+  var r = {x:x, y:y, size: { w:w, h:h }};
+  window.log.waitAsParent(div);
+  funcA(1,2);
+  //window.log.options.timestamp = true;
+  window.log.debug(div, "new Rectangle", r);
+  //window.log.options.timestamp = false;
+  window.log.debug(div, "exiting makeRectangle");
+  return r;
+}
+</script>
+<button onclick="makeRectangle(1,2,3,4);">Make Rectangle</button>
+<div id="debug_log" class="log"></div>
+</body>
+</html>
