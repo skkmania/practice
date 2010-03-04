@@ -1,0 +1,50 @@
+<html>
+<head>
+<script src="prototype.js"></script>
+<script src="log4p.js"></script>
+</head>
+<body>
+<script>
+function funcB(x,y){
+  var div = window.log.getInto();
+  window.log.debug("entering funcB");
+  x = x * 8;
+  window.log.debug("x was multiplied by 8");
+  y = y * 3;
+  window.log.debug("y was multiplied by 3");
+  window.log.debug("leaving funcB");
+  window.log.goOut();
+  return x + y;
+}
+
+function funcA(x,y){
+  var div = window.log.getInto();
+  window.log.debug("entering funcA");
+  x = x * 10;
+  window.log.debug("x was multiplied by 10");
+  funcB(3,2);
+  y = y * 5;
+  window.log.debug("y was multiplied by 5");
+  window.log.debug("leaving funcA");
+  window.log.goOut();
+  return x + y;
+}
+
+function makeRectangle(x,y,w,h){
+  window.log = new Log(Log.DEBUG, 'popup', {'level':false});
+  window.log.setCSSfile(window.location.href.replace(/[^\/]+\.html/, "log4p.css"));
+  window.log.debug("start logging");
+  window.log.debug("entering makeRectangle");
+  var r = {x:x, y:y, size: { w:w, h:h }};
+  funcA(1,2);
+  //window.log.options.timestamp = true;
+  window.log.debug("new Rectangle", r);
+  //window.log.options.timestamp = false;
+  window.log.debug("exiting makeRectangle");
+  return r;
+}
+</script>
+<button onclick="makeRectangle(1,2,3,4);">Make Rectangle</button>
+<div id="debug_log" class="log"></div>
+</body>
+</html>

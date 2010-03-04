@@ -1,0 +1,1 @@
+scriptaculous/lib/prototype.js
